@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %} registation {% endblock title %}
+{% block body %}
+
+<h1 style="color:blueviolet; text-align: center; font-style: italic;">vaccine registation page</h1>
+<div class="container">
+    <h4 style="color:blueviolet; text-align: left; font-style: italic;"> registation for vaccine</h4>
+   <form class="form" method="POST" action="/booking">
+     <div class="mb-3">
+        <label for="email" class="col-form-label">first name</label>
+        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+     </div>
+    
+     <div class="mb-3">
+       <label for="email" class="form-label">name</label>
+       <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+     </div>
+
+     <div class="mb-3">
+        <label for="email" class="form-label">last name</label>
+        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+      </div>
+
+     <div class="mb-3">
+       <label for="pass" class="form-label">Email-id</label>
+       <input type="password" class="form-control" id="pass" name="password">
+     </div>
+     <div class="mb-3">
+        <label for="pass" class="form-label">Mobile No</label>
+        <input type="password" class="form-control" id="pass" name="password">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">DOB</label>
+        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Age</label>
+        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Address</label>
+        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Gender</label>
+        <div class="mb-3">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2"> Male </label>
+        </div>
+        <div class="mb-3">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2"> Female </label>
+        </div>
+     </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">vaccine name</label>
+        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+      </div>
+     
+     <div class="mb-3 form-check">
+       <input type="checkbox" class="form-check-input" id="exampleCheck1">
+       <label class="form-check-label" for="exampleCheck1">Check me out</label>
+     </div>
+     <button type="submit" class="btn btn-outline-dark">submit</button>
+    </div> 
+   </form>
+  </div>  
+
+{% endblock body %}
