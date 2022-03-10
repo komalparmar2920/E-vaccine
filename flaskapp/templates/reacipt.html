@@ -1,5 +1,141 @@
 {% extends 'base.html' %}
-{% block title %} booking {% endblock title %}
+{% block title %} Reacipt {% endblock title %}
 {% block body %}
-<h1 style="color:blueviolet; text-align: center; font-style: italic;">Registation Reacipt</h1>
+<h1 style="color:blueviolet; text-align: center; font-style: italic;">Registration Reacipt</h1>
+{% for eVaccine in alltodo1 %}
+<div class="container-fluid h-10">
+    <div class="main-body">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-lg-8">
+                <div class="card">
+                     <h4 style="color:blueviolet; text-align: left; font-style: italic;">personal details :</h4>
+                    <form class="form" method="POST" action="/feedback"> 
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">First Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.fname}}">
+                            </div>
+                             
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.named}}">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">last Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.lname}}">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.email}}">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Mobile Phone</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.mno}}">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">your date of birth </h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.dob}}">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">your Age </h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.age}}">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Address</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.address}}">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">vaccine name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.vname}}">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Gender</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" value="{{eVaccine.gender}}">
+                            </div>
+                        </div>
+                       
+                        <div class="col-sm-3">
+                            <h4 style="color:blueviolet; text-align: left; font-style: italic;">vaccine details :</h4>
+                        </div>
+                
+                        <div>
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="center">Sno</th>
+                                        <th>vaccine name</th>
+                                        <th>center Name</th>
+                                        <th>time</th>
+                                        <th>vaccine doze</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                {% for eVaccine in alltodo2 %}
+                                   <tr>
+                                       <td class="center">{{loop.index}}</td>
+                                        <td>{{eVaccine.vname}}</td>
+                                        <td>{{eVaccine.cname}} </td>
+                                        <td>{{eVaccine.stime}}</td>
+                                        <td>{{eVaccine.vdoze}}</td>
+                                       
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                            
+                            
+                                <a href="/feedback" type="button" class="btn btn-outline-dark">Register</a>
+                                <a href="/form" type="button" class="btn btn-outline-dark">cancel</a>
+				             
+                        </div>
+                    </div>
+                    </form>
+
+                    </div>
+                </div>
+</div>                
+
+{% endfor %} 
+</div> 
 {% endblock body %}

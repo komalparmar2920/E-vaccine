@@ -5,6 +5,12 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+.abc{
+  color:blueviolet; 
+  text-align: center; 
+  font-style: italic;
+}
+
 .search {
   width: 100%;
   position: relative;

@@ -1,74 +1,78 @@
 {% extends 'base.html' %}
-{% block title %} registation {% endblock title %}
+{% block title %} registration {% endblock title %}
 {% block body %}
 
-<h1 style="color:blueviolet; text-align: center; font-style: italic;">vaccine registation page</h1>
+<h1 style="color:blueviolet; text-align: center; font-style: italic;">vaccine registration page</h1>
 <div class="container">
-    <h4 style="color:blueviolet; text-align: left; font-style: italic;"> registation for vaccine</h4>
-   <form class="form" method="POST" action="/booking">
+    <h4 style="color:blueviolet; text-align: left; font-style: italic;"> registration for vaccine</h4>
+    <form class="form" method="POST" action="/booking">
      <div class="mb-3">
-        <label for="email" class="col-form-label">first name</label>
-        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+        <label for="named" class="col-form-label">first name</label>
+        <input type="text" class="form-control" name="fname" id="named" aria-describedby="emailHelp">
      </div>
     
      <div class="mb-3">
-       <label for="email" class="form-label">name</label>
-       <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+       <label for="name" class="form-label">name</label>
+       <input type="text" class="form-control" name="named" id="name" aria-describedby="emailHelp">
      </div>
 
      <div class="mb-3">
-        <label for="email" class="form-label">last name</label>
-        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+        <label for="lname" class="form-label">last name</label>
+        <input type="text" class="form-control" name="lname" id="lname" aria-describedby="emailHelp">
       </div>
 
      <div class="mb-3">
-       <label for="pass" class="form-label">Email-id</label>
-       <input type="password" class="form-control" id="pass" name="password">
+       <label for="email_id" class="form-label">Email-id</label>
+       <input type="text" class="form-control" name="email" id="email_id">
      </div>
      <div class="mb-3">
-        <label for="pass" class="form-label">Mobile No</label>
-        <input type="password" class="form-control" id="pass" name="password">
+        <label for="mno" class="form-label">Mobile No</label>
+        <input type="text" class="form-control" name="mno" id="mno">
       </div>
 
       <div class="mb-3">
-        <label for="email" class="form-label">DOB</label>
-        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+        <label for="DOB" class="form-label">DOB</label>
+        <input type="text" class="form-control" name="dob" id="DOB" aria-describedby="emailHelp">
       </div>
 
       <div class="mb-3">
-        <label for="email" class="form-label">Age</label>
-        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+        <label for="age" class="form-label">Age</label>
+        <input type="text" class="form-control" name="age" id="age" aria-describedby="emailHelp">
       </div>
 
       <div class="mb-3">
-        <label for="email" class="form-label">Address</label>
-        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" class="form-control" name="address" id="address" aria-describedby="emailHelp">
       </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Gender</label>
         <div class="mb-3">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2"> Male </label>
+          <input class="form-check-input" type="radio" name="gender" id="gender" value="male" checked>
+          <label class="form-check-label" for="gender"> Male </label> 
         </div>
         <div class="mb-3">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2"> Female </label>
+          <input class="form-check-input" type="radio" name="gender" id="Gender" value="Female" checked>
+          <label class="form-check-label" for="Gender"> Female </label>
         </div>
      </div>
 
       <div class="mb-3">
-        <label for="email" class="form-label">vaccine name</label>
-        <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+        <label for="vname" class="form-label">vaccine name</label>
+        <input type="text" class="form-control" name="vname" id="vname" aria-describedby="emailHelp">
       </div>
+
+      
      
      <div class="mb-3 form-check">
        <input type="checkbox" class="form-check-input" id="exampleCheck1">
        <label class="form-check-label" for="exampleCheck1">Check me out</label>
      </div>
      <button type="submit" class="btn btn-outline-dark">submit</button>
+     
+
+
     </div> 
    </form>
   </div>  
-
 {% endblock body %}

@@ -12,33 +12,18 @@
         <img src="{{ url_for('static', filename='images/project.jpg')}}" height="500" width="800">
       </div>
       <div class="col-md-4">
-        <form action="/registerUser" method="POST">
-        <h4>Register for vaccination</h4>
+        <form action="/addVaccineAction" method="POST">
+        <h4>add vaccine</h4>
         <div class="mb-3">
             <label for="named" class="form-label">name</label>
             <input type="text" class="form-control" name="named" id="named">
         </div>
         <div class="mb-3">
-          <label for="email" class="form-label">Email address</label>
-          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-       <div class="mb-3">
-          <label for="pass" class="form-label">Password</label>
-          <input type="password" class="form-control" name="password" id="pass" onChange="onChange()"/>
-        </div>
-        <div class="mb-3">
-          <label for="conf_pass" class="form-label">Confirm Password</label>
-          <input type="password" class="form-control" name="conf_password" id="conf_pass" onChange="onChange()"/>
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <label for="named" class="form-label">Description</label>
+            <input type="text" class="form-control" name="desc" id="named">
         </div>
       
       <button type="submit" class="btn btn-outline-dark" onclick="onChange()">Register</button>
-      <p class="mt-2">Already a register <a href="login">Login Here</a></p>
-
      </form>
     </div> 
     </div> 

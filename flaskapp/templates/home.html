@@ -5,12 +5,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static' , filename='css/ser.css') }}">
 </head>    
 <h1 style="color:blueviolet; text-align: center; font-style: italic;">welcome to our website</h1>
-<form class="form" method="POST" action="/form">
+<form class="form" method="POST" action="/search">
 <div class="wrap">
     <h4 style="color:blueviolet; text-align: center; font-style: italic;">search vaccine name here</h4>
     <div class="search">
     
-       <input type="text" class="searchTerm"  placeholder="serch here vaccine name....">
+       <input type="text" class="searchTerm" name="vaccine" id="vaccine"  placeholder="serch here vaccine name....">
        <button type="submit" class="btn btn-outline-info">
          <i class="fa fa-search"></i>
       </button>
